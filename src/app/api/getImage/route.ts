@@ -15,11 +15,13 @@ export async function POST(request: NextRequest) {
     if (!fileName) {
       return NextResponse.json({ error: 'file name is required' }, { status: 400 });
     }
-  
+    console.log("projectId", process.env.GCS_PROJECT_ID)
+    console.log("testkey", process.env.TEST_KEY);
     const storage = new Storage({
-      projectId: process.env.PROJECT_ID,
+      projectId: process.env.GCS_PROJECT_ID,
       keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON,
     })
+
   
     const bucketName = process.env.BUCKET_NAME ?? '';
     const bucket = storage.bucket(bucketName);
