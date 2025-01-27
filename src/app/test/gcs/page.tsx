@@ -1,4 +1,5 @@
 // app/test/gcs/page.tsx
+"use client";
 import { useState } from 'react';
 import { uploadFileToGCS } from '@/lib/gcs';
 
