@@ -1,11 +1,11 @@
 
-import { NextApiRequest} from 'next';
+
 import { GetSignedUrlConfig, Storage } from '@google-cloud/storage';
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 
 
 
-export async function POST(request: NextApiRequest) {
+export async function POST(request: NextRequest) {
   
     if (!request.url) {
       return NextResponse.json({ error: 'URL is required' }, { status: 400 });
