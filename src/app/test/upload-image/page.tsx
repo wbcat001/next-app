@@ -1,8 +1,8 @@
 "use client";
-import { NextPage } from 'next'
+
 import { useState, ChangeEvent } from 'react'
 import { uploadImg } from '@/lib/image';
-import { error } from 'console';
+
 
 
 export default function UploadFilePage() {

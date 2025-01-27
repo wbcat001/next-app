@@ -1,5 +1,5 @@
 
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest} from 'next';
 import { GetSignedUrlConfig, Storage } from '@google-cloud/storage';
 import { NextResponse } from 'next/server';
 
