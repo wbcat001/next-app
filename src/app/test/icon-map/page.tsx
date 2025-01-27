@@ -1,5 +1,8 @@
-import MapWithCustomIcon from "@/components/MapWithCustomIcon";
+import dynamic from "next/dynamic";
 
+const MapWithCustomIcon = dynamic(() => import("@/components/MapWithCustomIcon"), {
+  ssr: false, // サーバーサイドレンダリングを無効化
+});
 export default function CustomIconMapPage() {
   return (
     <main>

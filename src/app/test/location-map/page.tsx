@@ -1,5 +1,10 @@
-import MapWithLocation from "@/components/MapWithLocation";
 
+
+import dynamic from "next/dynamic";
+
+const MapWithLocation = dynamic(() => import("@/components/MapWithLocation"), {
+  ssr: false, // サーバーサイドレンダリングを無効化
+});
 export default function LocationMapPage() {
   return (
     <main>
