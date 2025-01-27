@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
   
   const body = await request.json()
   const fileName = body.fileName  
-  console.log(fileName)
+  console.log("upload filename", fileName)
   const file = bucket.file(fileName);
   
   try{
