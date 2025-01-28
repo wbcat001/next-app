@@ -18,11 +18,9 @@ export async function POST(request: NextRequest) {
     console.log("projectId", process.env.GCS_PROJECT_ID)
     console.log("testkey", process.env.TEST_KEY);
     console.log("credential", process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
+    const credential = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON 
 
-    const storage = new Storage({
-      projectId: process.env.GCS_PROJECT_ID,
-      keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON,
-    })
+    const storage = credential ? new Storage({ projectId: process.env.GCS_PROJECT_ID, keyFilename: credential }) : new Storage();
 
   
     const bucketName = process.env.BUCKET_NAME ?? '';
