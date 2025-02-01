@@ -27,6 +27,9 @@ const TestPage = () => {
         <li>
           <Link href="/test/getImage">Test Get Image</Link>
         </li>
+        <li>
+          <Link href="/test/userdata">Test Get User data</Link>
+        </li>
         {/* <li>
           <Link href="/test/gcs">Test GCS Access</Link>
         </li> */}

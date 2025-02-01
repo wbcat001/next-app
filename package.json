@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@google-cloud/storage": "^7.15.0",
+    "@prisma/client": "^6.3.0",
     "leaflet": "^1.9.4",
     "next": "15.1.6",
+    "prisma": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-leaflet": "^5.0.0",
