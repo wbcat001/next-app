@@ -52,6 +52,7 @@ export async function POST(request: NextRequest) {
     }
 
     const [res] = await file.generateSignedPostPolicyV4(options);
+    console.log("upload response", res);
     return NextResponse.json(res, { status: 200 });
   }catch(error: unknown){
     if (error instanceof Error){
