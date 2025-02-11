@@ -68,7 +68,7 @@ const customIcon = (url: string)  => new Icon({
 });
 
 const MapWithCustomIcon = () => {
-  const [images, setImages] = useState<{generatedUrl: string, id: String, latitude: number, longitude: number}[]>([]);
+  const [images, setImages] = useState<{generatedUrl: string, id: string, latitude: number, longitude: number}[]>([]);
 
   return (
     <MapContainer

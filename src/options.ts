@@ -73,7 +73,7 @@ const options: NextAuthOptions = {
     async jwt({ token, user, account, profile }) {
       if (user) {
         token.user = user
-        const u = user as any
+        // const u = user as any
         token.role = "admin" // u.role
       }
       if (account) {
@@ -84,7 +84,7 @@ const options: NextAuthOptions = {
       return token
     },
     session: ({ session, token }) => {
-      token.accessToken
+      // token.accessToken
       return {
         ...session,
         user: {
