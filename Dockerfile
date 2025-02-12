@@ -25,6 +25,7 @@ COPY . .
 ARG _DATABASE_URL
 ENV DATABASE_URL=$_DATABASE_URL
 
+
 # RUN yarn build
 RUN env
 # If using npm comment out above and use below instead
