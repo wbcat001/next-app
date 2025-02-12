@@ -29,7 +29,8 @@ ENV DATABASE_URL=$_DATABASE_URL
 # RUN yarn build
 RUN env
 
-
+RUN prisma generate
+RUN prisma migrate deploy
 # If using npm comment out above and use below instead
 RUN npm run build
 
